@@ -76,7 +76,7 @@ Features that weren't used but are in the initial set:
 
 [^*]: *marked features are created by us. 
 <!--{{ dataset_structure | default("[More Information Needed]", true)}}-->
-
+Since we have a time series data, instead of normal cross validation methods "Time series cross validation" was utilized while splitting the dataset. Time series cross validation is a technique that splits the data in such a way that test set is always the future compared to the train set; keeping the meaning of the corresponding dates of the datapoints. This way we made sure there were no data leakage and the model used "past" data and predicted the next one.  
 ## Dataset Creation
 
 ### Source Data
@@ -86,16 +86,18 @@ Individual passengers traveling in the given hour is calculated by Istanbul Metr
 #### Data Collection and Processing
 
 <!-- This section describes the data collection and processing process such as data selection criteria, filtering and normalization methods, tools and libraries used, etc. -->
-12 months of hourly data was merged into one. 
-For the temperature data we utilized [meteoblue](meteoblue.com/) and for the match data, [wikipedia](https://tr.wikipedia.org/wiki/2021-22_S%C3%BCper_Lig_ma%C3%A7lar%C4%B1) was used. Initial dataset had marine routes as well but only railway and highway data was used due to errors in the tags of marine lines.
+12 months of hourly data was merged into one using OS command lines. 
+For the temperature data, we utilized [meteoblue](meteoblue.com/) and for the match data, [wikipedia](https://tr.wikipedia.org/wiki/2021-22_S%C3%BCper_Lig_ma%C3%A7lar%C4%B1) was used. Initial dataset had marine routes as well but only railway and highway data was used due to errors in the tags of marine lines.
 <!--{{ data_collection_and_processing_section | default("[More Information Needed]", true)}}-->
 
 #### Features and the target
 
 <!-- This section describes the features of the dataset and the target of the project -->
 Features that are used: *'transition_hour',  'transport_type_id',  'day',  'line_encoded', 'transfer_type_b', 'number_of_passenger', 'month', 'dayofyear', 'day_of_month', 'top_lines_indicator'*
+
 Target: *'number_of_passenger'*. 
- Their respected explanation can be found in the [Dataset Structure](#dataset-structure) section. 
+
+Their respected explanation can be found in the [Dataset Structure](#dataset-structure) section. 
 
 <!--### Annotations [optional]
 
@@ -118,7 +120,7 @@ Target: *'number_of_passenger'*.
 
 <!-- This section is meant to convey both technical and sociotechnical limitations. -->
 For better analysis and a better demand planning system, usage information for each stop of the routes is needed. However, in order to track each stop, cameras or other sensors must be utilized since citizens don't have to use their transport cards while leaving transportation vehicles. 
-Since individual stop data is not available, popular locations can't be extracted from the dataset. This can later affect the bias of the models. 
+Since individual stop data is not available, popular locations can't be extracted from the dataset. If the routes also had locational data at least for their first and last stops, more in-depth analysis could've been made as well. Moreover, dataset is not balanced at all. Most used 15 lines have over millions of passengers while the rest have very less usage, meaning that unpopular routes contribute more to the dataset with more data points. The models might have a hard time predicting large values because of this.
 <!--{{ bias_risks_limitations | default("[More Information Needed]", true)}}-->
 
 
