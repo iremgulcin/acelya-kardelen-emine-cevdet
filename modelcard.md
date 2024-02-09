@@ -1,25 +1,24 @@
 ---
 # MODEL CARD
 
-# Model Card for {{ model_id | default("Model ID", true) }}
-
+# Model Card for Histogram-based Gradient Boost Regressor
 <!-- Provide a quick summary of what the model is/does. -->
-
-{{ model_summary | default("", true) }}
+The model predicts the number of usage of a given line, in a given date and hour.
+<!--{{ model_summary | default("", true) }}-->
 
 ## Model Details
 
 ### Model Description
 
 <!-- Provide a longer summary of what this model is. -->
+Our model uses its training features like date, hour and transfer_type etc. to predict the number of usage for a specified route. 
+<!--{{ model_description | default("", true) }}-->
 
-{{ model_description | default("", true) }}
-
-- **Developed by:** {{ developers | default("[More Information Needed]", true)}}
+- **Developed by:** Scikit-learn (finetuned by: Açelyanur Şen, Cevdet Eren Bozkurt)
 - **Model date:** {{ model_date | default("[More Information Needed]", true)}}
 - **Model type:** {{ model_type | default("[More Information Needed]", true)}}
 - **Language(s):** {{ language | default("[More Information Needed]", true)}}
-- **Finetuned from model [optional]:** {{ base_model | default("[More Information Needed]", true)}}
+- **Finetuned from model:** Scikit-learn's Histogram-based gradient boost regression model 
 
 ### Model Sources [optional]
 
