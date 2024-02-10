@@ -20,11 +20,11 @@ Our model uses its training features like date, hour and transfer_type etc. to p
 - **Language(s):** Python, scikit-learn
 - **Finetuned from model:** Scikit-learn's Histogram-based gradient boost regression model 
 
-### Model Sources [optional]
+### Model Sources 
 
 <!-- Provide the basic links for the model. -->
 
-- **Repository:** {{ repo | default("[More Information Needed]", true)}}
+- Model creation code can be found [here](https://github.com/iremgulcin/acelya-kardelen-emine-cevdet/blob/main/h_gbr_model.ipynb)
 
 
 ## Uses
@@ -36,7 +36,7 @@ Predicting the number of usages for a specific route on a specific date and hour
 <!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. 
 {{ direct_use | default("[More Information Needed]", true)}}-->
 
-### Downstream Use [optional]
+### Downstream Use 
 
 <!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
 The predictions of the model can be used to plan better schedules for transportation routes or better resource management.
@@ -66,8 +66,12 @@ Using the model for purposes other than predicting usage, such as pricing. Since
 ## How to Get Started with the Model
 
 Use the code below to get started with the model.
+```python
+import joblib
+loaded_model = joblib.load('/file-path/hist_model_tempsiz_tscv.joblib')
+```
 
-{{ get_started_code | default("[More Information Needed]", true)}}
+Saved model file can be found [here](hist_model_tempsiz_tscv.joblib) 
 
 ## Training Details
 
