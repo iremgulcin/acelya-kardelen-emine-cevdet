@@ -180,5 +180,5 @@ Result of predicting February 2023 set which the model never seen:
 
 #### Summary
 
-The model exhibited good performance on the training set but showed some generalization error on the separate test set, with slightly higher MAE and RMSE values. Interestingly, it **performed surprisingly well on the February 2023 data**, achieving lower MAE, RMSE.
+The model exhibited good performance on the training set but showed some generalization error on the separate test set, with slightly higher MAE and RMSE values. Interestingly, it **performed surprisingly well on the February 2023 data**, achieving similar MAE, RMSE scores as the inital training process.
 
