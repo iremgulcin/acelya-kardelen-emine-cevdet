@@ -166,6 +166,10 @@ Results after predicting the training set i.e. our initial set:
 
 <img src="https://github.com/iremgulcin/acelya-kardelen-emine-cevdet/assets/122313795/bb979799-38fe-4963-9153-1b19bbbdf837" width="850" height="360">
 
+February part of the graph:
+
+<img src="https://github.com/iremgulcin/acelya-kardelen-emine-cevdet/assets/122313795/cf303b41-5b5f-4595-9dd0-78f4f1c1c67e" width="850" height="360">
+
 Result of predicting February 2023 set which the model never seen:
 - **MAE:**  98.55941068384743
 - **RMSE**:  323.4147218899902
