@@ -31,7 +31,7 @@ In the project, 6 different models were trained to predict the passenger counts 
 In the application phase of the model, there will be a front-end where users can select the route, date, and time. After making selections, the model's prediction will be displayed on the screen.
 
 ## Future Plans
-One feature we plan to implement in the future is to display and compare the predicted value with the data from the same date and time one year ago. This allows for the verification of prediction accuracy and facilitates gathering feedback to address real-world issues. Additionally, we aim to compare previous hours of the same route to provide users with insights.
+One future plan would be to use real-time data in order to predict *user flow* and to calculate importance of each stop of the routes. This would deflinitely improve the predictions of the model.
 
 ## License
 This project is licensed under the MIT License.
