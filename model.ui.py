@@ -92,15 +92,16 @@ if st.button("Submit"):
             predicted_passengers = abs(prediction)[0]  # first prediction
         st.write("Tahmin edilen yolcu yoğunluğu:", int(predicted_passengers))
         
-        # Plot number_of_passenger for the selected line on the same day in 2022
+        # plot number_of_passenger for the selected line on the same day in 2022
         selected_month = input_df['month'].iloc[0]
         selected_day = input_df['day_of_month'].iloc[0]
         line_same_day_data = veriler_2022[(veriler_2022['line'] == line) & (veriler_2022['month'] == selected_month) & (veriler_2022['day'] == selected_day)]
         
-                # Plot using Plotly Express
+               
         fig = px.line(line_same_day_data, x='transition_hour', y='number_of_passenger', 
+                    color='transfer_type',
                     labels={'number_of_passenger': 'Kullanım Sayısı'},
-                    title=f"{line} Hattı İçin {selected_month} / {selected_day} / 2022'deki Kullanım Dağılımı")
+                    title=f"{line} Hattı İçin {selected_day}/{selected_month}/2022'deki Kullanım Dağılımı")
 
         # Add labels and legend
         fig.update_layout(
@@ -113,7 +114,6 @@ if st.button("Submit"):
 
         fig.update_traces(hovertemplate='Saat: %{x} <br> Kullanım Sayısı: %{y} <extra></extra>')
 
-        # Show the plot using Streamlit
         st.plotly_chart(fig)
 
 
