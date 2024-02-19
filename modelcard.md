@@ -14,7 +14,7 @@ The model predicts the number of usage of a given line, in a given date and hour
 Our model uses its training features like date, hour and transfer_type etc. to predict the number of usage for a specified route. 
 <!--{{ model_description | default("", true) }}-->
 
-- **Developed by:** Scikit-learn (finetuned by: Açelyanur Şen, Cevdet Eren Bozkurt)
+- **Developed by:** Scikit-learn (finetuned by: Açelyanur Şen, Cevdet Eren Özbozkurt)
 - **Model date:** 07/02/2024
 - **Model type:** Regression model
 - **Language(s):** Python, scikit-learn
