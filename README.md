@@ -28,7 +28,11 @@ In the project, 6 different models were trained to predict the passenger counts 
 6. **Hist Gradient Boosting Regressor**: This model, which utilizes histogram-based gradient boosting, outperformed other models. After preparing the data and training the model, we obtained an r^2 score of 98.83%. However, upon scrutinizing some graphical representations of the model's results, we are deliberating whether the accuracy of the model is genuine or potentially misleading.
 
 ## Application
-In the application phase of the model, there will be a front-end where users can select the route, date, and time. After making selections, the model's prediction will be displayed on the screen.
+In the application phase of the model, there will be a front-end where users can select the route, date, time, and transfer type. After making selections, the model's prediction will be displayed on the screen.
+
+
+https://github.com/iremgulcin/acelya-kardelen-emine-cevdet/assets/122313795/f3039432-4744-4b55-9757-c531bb971a31
+
 
 ## Future Plans
 One future plan would be to use real-time data in order to predict *user flow* and to calculate importance of each stop of the routes. This would deflinitely improve the predictions of the model.
