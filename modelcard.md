@@ -66,12 +66,16 @@ Using the model for purposes other than predicting usage, such as pricing. Since
 ## How to Get Started with the Model
 
 Use the code below to get started with the model.
-```python
-import joblib
-loaded_model = joblib.load('/file-path/hist_model_tempsiz_tscv.joblib')
-```
 
-Saved model file can be found [here](hist_model_tempsiz_tscv.joblib) 
+Install streamlit first:
+```console
+pip install streamlit
+```
+Run the [streamlit UI file](model_ui.py):
+```console
+streamlit model_ui.py
+```
+ 
 
 ## Training Details
 
