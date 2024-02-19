@@ -3,7 +3,7 @@
 This project aims to predict the number of passengers using public transportation lines in Istanbul at specified time intervals. This facilitates end-users, citizens, to plan their travels accordingly, and enables the municipality to adjust the frequency of routes during peak hours.
 
 ## Dataset
-The dataset used in the project was downloaded from the Istanbul Metropolitan Municipality's open data portal. It contains hourly passenger counts of public transportation lines in Istanbul for the year 2020. The columns in the dataset are as follows:
+The dataset used in the project was downloaded from the Istanbul Metropolitan Municipality's open data portal. It contains hourly passenger counts of public transportation lines in Istanbul for the year 2022. The columns in the dataset are as follows:
 
 - **Date**: The date when the passenger count was recorded.
 - **Time**: The time when the passenger count was recorded.
